@@ -5,9 +5,29 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 0px;
+  padding: 0px toRem(10);
+
+  padding: 0 toRem(10);
+  @include adaptiveValue("height", 70, 50);
+  min-width: toRem(180);
+
+  background-color: #6d6254;
+  border-radius: toRem(10);
+  border: toRem(1) solid #6d6254;
+
+  color: #fbf5ed;
+  text-align: center;
+  font-family: "Montserrat";
+  @include adaptiveValue("font-size", 24, 20);
+  font-weight: 600;
+  line-height: 125%; /* 30/24 */
+  letter-spacing: -0.333px;
+
+  transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
+      color: #6d6254;
+      background-color: #fff;
     }
   }
   &--fw {
