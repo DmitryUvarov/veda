@@ -449,3 +449,73 @@
   &__input {
   }
 }
+
+//========================================================================================================================================================
+
+.team {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 55, 35);
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+    &.swiper-wrapper {
+      @media (min-width: $mobile) {
+        display: grid;
+
+        @include adaptiveValue("gap", 30, 15, 0, 1230, 767);
+
+        @media (min-width: $mobile) {
+          grid-template-columns: repeat(auto-fill, minmax(toRem(350), 1fr));
+        }
+      }
+    }
+  }
+
+  &__slide {
+  }
+
+  &__pagination {
+    margin-top: toRem(20);
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.slide-team {
+  &__image-ibg {
+    padding-bottom: percent(498, 380);
+    margin-bottom: toRem(10);
+    border-radius: toRem(5);
+    overflow: hidden;
+  }
+
+  &__content {
+  }
+
+  &__name {
+    @include adaptiveValue("font-size", 24, 22);
+    line-height: 108.3%; /* 26/24 */
+  }
+
+  &__place {
+    font-family: "Montserrat";
+    font-size: toRem(16);
+    line-height: 168.8%; /* 27/16 */
+  }
+
+  &__old {
+    color: #6d6254;
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 100%; /* 100% */
+  }
+}

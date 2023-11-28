@@ -162,6 +162,59 @@ function initSliders() {
 			},
 		});
 	}
+
+	for (const mobileSlider of document.querySelectorAll('.team__slider')) {
+        if (mobileSlider) {
+            (function () {
+                "use strict";
+
+                const breakpoint = window.matchMedia("(min-width:768px)");
+                let slider;
+
+                const enableSwiper = function () {
+                    slider = new Swiper(mobileSlider, {
+                        modules: [Pagination],
+						observer: true,
+						observeParents: true,
+						slidesPerView: 1,
+						spaceBetween: 0,
+						speed: 800,
+
+						pagination: {
+							el: '.team__pagination',
+							clickable: true,
+						},
+
+						breakpoints: {
+							320: {
+								slidesPerView: 1.3,
+								spaceBetween: 20,
+							},
+							570: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+						},
+
+                    });
+                };
+				console.log(mobileSlider)
+                const breakpointChecker = function () {
+                    if (breakpoint.matches === true) {
+                        if (slider !== undefined) slider.destroy(true, true);
+
+                        return;
+                    } else if (breakpoint.matches === false) {
+                        return enableSwiper();
+                    }
+                };
+
+                breakpoint.addListener(breakpointChecker);
+                breakpointChecker();
+            })();
+        }
+
+    }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
