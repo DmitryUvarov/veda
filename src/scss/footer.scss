@@ -85,7 +85,7 @@
   &__copy {
     @include adaptiveValue("margin-top", 40, 25);
     color: #fff;
-    @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("font-size", 16, 13);
     line-height: 130%; /* 23.4px */
 
     display: flex;
