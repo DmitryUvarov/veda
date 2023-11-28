@@ -519,3 +519,91 @@
     line-height: 100%; /* 100% */
   }
 }
+
+//========================================================================================================================================================
+
+.gallery {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+
+  &__wrapper {
+    background-color: #fbf5ed;
+    @media (max-width: $mobile) {
+      background-color: #eae0d6;
+    }
+  }
+
+  &__container {
+  }
+
+  &__container {
+  }
+
+  &__body {
+    @media (min-width: $mobile) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__content {
+    @include adaptiveValue("padding-top", 60, 20);
+    @include adaptiveValue("padding-bottom", 85, 35);
+    @include adaptiveValue("padding-right", 55, 15, 0, 1230, 767);
+    @include adaptiveValue("padding-left", 55, 15, 0, 1230, 767);
+
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(500, 1200);
+    }
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #eae0d6;
+      border-radius: toRem(5);
+      z-index: 1;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 20, 15);
+
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 50, 24);
+    line-height: 128%; /* 64/50 */
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 130%; /* 26/20 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 25);
+    }
+  }
+
+  &__link {
+    @media (min-width: $mobile) {
+      min-width: toRem(377);
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
+.button {
+}
