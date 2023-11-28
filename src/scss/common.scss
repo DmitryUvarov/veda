@@ -76,6 +76,32 @@
 }
 
 //========================================================================================================================================================
+
+.social {
+  display: flex;
+  gap: toRem(10);
+  &__link {
+    border-radius: toRem(5);
+    @include adaptiveValue("width", 60, 50);
+    @include adaptiveValue("height", 60, 50);
+    flex-shrink: 0;
+    background-color: #eae0d6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 40, 30);
+    color: #6d6254;
+
+    transition: all 0.2s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(109, 98, 84, 0.4);
+      }
+    }
+  }
+}
+
 //========================================================================================================================================================
 
 // .fancybox__container {

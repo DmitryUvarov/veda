@@ -728,3 +728,79 @@
     max-width: 100%;
   }
 }
+
+//========================================================================================================================================================
+
+.location {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 150, 45);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 30, 15);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    border-radius: toRem(5);
+    border: toRem(1) solid #6d6254;
+
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-right", 40, 15, 0, 1230, 767);
+    @include adaptiveValue("padding-left", 40, 15, 0, 1230, 767);
+  }
+
+  &__line {
+    color: #6d6254;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 15);
+    }
+  }
+
+  &__subtitle {
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 24, 20);
+    font-weight: 600;
+    line-height: 125%; /* 30/24 */
+    letter-spacing: -0.333px;
+    margin-bottom: toRem(5);
+  }
+
+  &__link {
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: 108.3%; /* 26/24 */
+    display: block;
+  }
+  a.location__link {
+    transition: all 0.2s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  &__social {
+    margin-top: toRem(5);
+  }
+
+  &__map-ibg {
+    flex: 0 0 percent(725, 1200);
+    border-radius: toRem(5);
+    overflow: hidden;
+    padding-bottom: percent(498, 1200);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+  }
+}
