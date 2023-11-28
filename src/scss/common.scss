@@ -2,6 +2,82 @@
 
 //========================================================================================================================================================
 
+.title {
+  color: #000100;
+  font-family: "Montserrat";
+  @include adaptiveValue("font-size", 40, 28);
+  font-weight: 500;
+  line-height: 108%; /* 108% */
+}
+
+//========================================================================================================================================================
+
+.navigation {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+  &__button {
+    pointer-events: all;
+    border-radius: 50%;
+    background-color: #fff;
+    border: toRem(1) solid #6d6254;
+
+    @include adaptiveValue("width", 60, 50);
+    @include adaptiveValue("height", 60, 50);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #6d6254;
+    font-size: toRem(19);
+
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #6d6254;
+        color: #fff;
+      }
+    }
+  }
+}
+.button-prev {
+}
+.button-next {
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(5);
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    width: toRem(10);
+    height: toRem(10);
+    border-radius: 50%;
+    background-color: #eae0d6;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #6d6254;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #6d6254;
+  }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
 // .fancybox__container {
 //     max-width: none;
 // }
@@ -30,3 +106,5 @@
     user-select: none;
   }
 }
+
+//========================================================================================================================================================

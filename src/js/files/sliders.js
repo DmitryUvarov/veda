@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -107,7 +107,7 @@ function initSliders() {
 	if (document.querySelector('.slider-text')) {
 		// Створюємо слайдер
 		new Swiper('.slider-text', {
-			modules: [Navigation, Autoplay],
+			modules: [ Autoplay],
 			observer: true,
 			observeParents: true,
 			speed: 8000,
@@ -136,6 +136,29 @@ function initSliders() {
 					slidesPerView: "auto",
 					spaceBetween: 60,
 				},
+			},
+		});
+	}
+
+	if (document.querySelector('.offers__slider')) {
+		// Створюємо слайдер
+		new Swiper('.offers__slider', {
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			speed: 800,
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+
+			navigation: {
+				prevEl: '.offers__slider .button-prev',
+				nextEl: '.offers__slider .button-next',
+			},
+
+			pagination: {
+				el: '.offers__pagination',
+				clickable: true,
 			},
 		});
 	}
