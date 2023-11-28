@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"О нас"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <h1 class="hero__title">Стоматология <span>Veda Stom</span></h1>
+                        <div class="hero__text">Узнайте больше о нас!</div>
+                        <button class="hero__button button">Обратная связь</button>
+                    </div>
+                </div>
+                <div class="hero__slider slider-text">
+                    <div class="slider-text__wrapper swiper-wrapper">
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                        <div class="slider-text__slide text-slide swiper-slide">Help ever - hurt never!</div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_about.htm',{})
+
+            <section class="principles">
+                <div class="principles__container">
+                    <h2 class="principles__title title">Принципы клиники </h2>
+                    <div class="principles__items">
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/01.svg" alt=""></div>
+                            <div class="item-principles__title">Надежность </div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/02.svg" alt=""></div>
+                            <div class="item-principles__title">Профессионализм</div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/03.svg" alt=""></div>
+                            <div class="item-principles__title">Малоинвазивность </div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/04.svg" alt=""></div>
+                            <div class="item-principles__title">Комфорт
+                                и высокий сервис </div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/05.svg" alt=""></div>
+                            <div class="item-principles__title">Чистота
+                                и стерильность</div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/06.svg" alt=""></div>
+                            <div class="item-principles__title">Современные методы
+                                и оборудование</div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/07.svg" alt=""></div>
+                            <div class="item-principles__title">Совершенствование
+                                знаний</div>
+                        </div>
+                        <div class="principles__item item-principles">
+                            <div class="item-principles__ico"><img src="@img/principles/08.svg" alt=""></div>
+                            <div class="item-principles__title">Индивидуальный
+                                подход</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_services.htm',{})
+
+            @@include('html/_contact.htm',{})
+
+            @@include('html/_team.htm',{})
+
+            @@include('html/_location.htm',{})
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

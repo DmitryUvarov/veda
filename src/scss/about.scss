@@ -1,0 +1,43 @@
+.principles {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(277), 1fr));
+    @include adaptiveValue("column-gap", 30, 15);
+    @include adaptiveValue("row-gap", 60, 25);
+  }
+
+  &__item {
+  }
+}
+
+.item-principles {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(10);
+  &__ico {
+    overflow: hidden;
+    border-radius: toRem(5);
+    box-shadow: 3px 3px 36px 0px #c5ac8e;
+    flex: 0 0 toRem(55);
+    height: toRem(55);
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 20, 18);
+    font-weight: 500;
+    line-height: 115%; /* 23/20 */
+  }
+}
