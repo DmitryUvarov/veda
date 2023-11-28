@@ -1,0 +1,39 @@
+.cases {
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__items {
+    display: grid;
+
+    @include adaptiveValue("column-gap", 30, 15, 0, 1230, 767);
+    row-gap: toRem(20);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(350), 1fr));
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-cases {
+  &__image-ibg {
+    padding-bottom: 100%;
+    margin-bottom: toRem(16);
+    border-radius: toRem(5);
+    overflow: hidden;
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-size: toRem(18);
+    line-height: 144.4%; /* 26/18 */
+  }
+}
