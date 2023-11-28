@@ -10,7 +10,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: #fff;
+      background-color: #fbf5ed;
       position: absolute;
       z-index: 6;
       opacity: 0;
@@ -83,10 +83,12 @@
       min-width: 0;
       height: toRem(40);
       width: toRem(40);
+      animation: horizontal-shaking 1.3s infinite;
     }
 
     &::before {
       font-size: toRem(18);
+
       @media (min-width: $mobile) {
         display: none;
       }
@@ -100,6 +102,24 @@
   }
 
   &__icon {
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(toRem(2));
+  }
+  50% {
+    transform: translateX(toRem(-2));
+  }
+  75% {
+    transform: translateX(toRem(2));
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
