@@ -389,3 +389,63 @@
     text-decoration: underline;
   }
 }
+
+//========================================================================================================================================================
+
+.contact {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 55, 35);
+  }
+
+  &__container {
+  }
+
+  &__body {
+    border-radius: toRem(5);
+    background: #fbf5ed;
+
+    @include adaptiveValue("padding-top", 25, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
+    @include adaptiveValue("padding-right", 40, 15, 0, 1230, 767);
+    @include adaptiveValue("padding-left", 40, 15, 0, 1230, 767);
+  }
+
+  &__text {
+    margin-bottom: toRem(20);
+
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 30, 22);
+    line-height: 133.3%; /* 40/30 */
+  }
+
+  &__form {
+  }
+}
+
+.form-contact {
+  &__body {
+    display: grid;
+
+    @include adaptiveValue("gap", 30, 15, 0, 1230, 767);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(350), 1fr));
+    }
+  }
+
+  &__line {
+  }
+
+  &__button {
+    width: 100%;
+    @include adaptiveValue("margin-top", 27, 15);
+  }
+
+  &__input {
+  }
+}
