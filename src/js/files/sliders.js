@@ -198,7 +198,7 @@ function initSliders() {
 
                     });
                 };
-				console.log(mobileSlider)
+
                 const breakpointChecker = function () {
                     if (breakpoint.matches === true) {
                         if (slider !== undefined) slider.destroy(true, true);
@@ -215,6 +215,52 @@ function initSliders() {
         }
 
     }
+
+	if (document.querySelector('.reviews__slider')) {
+		// Створюємо слайдер
+		new Swiper('.reviews__slider', {
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			speed: 800,
+			slidesPerView: 3,
+			spaceBetween: 30,
+			loop: true,
+
+			navigation: {
+				prevEl: '.reviews__slider .button-prev',
+				nextEl: '.reviews__slider .button-next',
+			},
+
+			pagination: {
+				el: '.reviews__pagination',
+				clickable: true,
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				1230: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
+	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
