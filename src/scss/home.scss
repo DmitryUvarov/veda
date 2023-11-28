@@ -605,5 +605,44 @@
     }
   }
 }
-.button {
+
+//========================================================================================================================================================
+
+.search-engine {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(20);
+    row-gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
+  &__image {
+  }
+
+  &__rating {
+  }
+
+  &__link {
+    color: #6d6254;
+    font-family: Montserrat;
+    font-size: toRem(16);
+    line-height: 168.8%; /* 27/16 */
+    text-decoration: underline;
+  }
 }
