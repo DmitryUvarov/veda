@@ -19,7 +19,7 @@
     @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
-      gap: toRem(20);
+      // gap: toRem(20);
 
       flex: 1 1 auto;
     }
@@ -71,6 +71,7 @@
     @media (max-width: $mobile) {
       width: 100%;
       margin-top: auto;
+      margin-bottom: toRem(20);
     }
   }
 
