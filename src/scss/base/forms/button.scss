@@ -62,3 +62,35 @@
     }
   }
 }
+
+//========================================================================================================================================================
+.button-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px toRem(10);
+
+  padding: 0 toRem(10);
+  @include adaptiveValue("height", 66, 50);
+  min-width: toRem(180);
+
+  background-color: #c5ac8e;
+  border-radius: toRem(30);
+  border: toRem(1) solid #6d6254;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Montserrat";
+  @include adaptiveValue("font-size", 20, 18);
+  font-weight: 600;
+  line-height: 125%; /* 30/24 */
+  letter-spacing: -0.333px;
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #6d6254;
+      background-color: #fff;
+    }
+  }
+}

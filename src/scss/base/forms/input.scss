@@ -48,3 +48,23 @@ textarea.input {
   resize: none;
   padding: 0px 0px;
 }
+
+//========================================================================================================================================================
+.input-line {
+  color: #6d6254;
+  font-family: "Helvetica Neue";
+  font-size: toRem(16);
+  font-weight: 500;
+  line-height: 22.4px; /* 140% */
+  padding: toRem(2) 0;
+
+  background-color: transparent;
+  border-bottom: toRem(1) solid #6d6254;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #6d6254;
+  }
+}

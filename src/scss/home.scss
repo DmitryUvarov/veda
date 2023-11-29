@@ -338,6 +338,8 @@
   }
 
   &__image-ibg {
+    border-radius: toRem(5);
+    overflow: hidden;
     padding-bottom: percent(460, 1200);
 
     @media (min-width: $mobile) {
@@ -376,6 +378,25 @@
     p {
       &:not(:last-child) {
         @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+
+    h6 {
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+    ul {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+    li {
+      display: flex;
+      &::before {
+        content: "·";
+        margin: 0 toRem(13);
+        font-size: toRem(26);
       }
     }
   }

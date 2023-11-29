@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Имплантация"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero-service">
+                <div class="hero-service__container">
+                    <div class="hero-service__body">
+                        <h1 class="hero-service__title">Имплантация в Veda Stom</h1>
+                        <div class="hero-service__text">Самый современный способ восстановление зубов</div>
+                        <button class="hero-service__button button" data-popup="#popup">Обратная связь</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="about__container">
+                    <div class="about__body">
+                        <div class="about__row">
+                            <div class="about__content">
+                                <h5 class="about__title">Имплантация зубов </h5>
+                                <div class="about__text text">
+                                    <p>представляет собой процесс установки <br> в костную ткань челюсти «опор»,
+                                        способных полноценно заменить<br>
+                                        «корень»-имплантат можно установить<br>
+                                        коронку или протез.<br></p>
+                                    <h6>Процедура имплантации <br> состоит из 3х частей:</h6>
+                                    <ul>
+                                        <li>установка имплантата-титанового стержня;</li>
+                                        <li>промежуточная часть-установка абатмента-супраструктуры;</li>
+                                        <li>фиксация искусственной коронки, заменяющей зуб. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="about__image-ibg"><img src="@img/service/01.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_contact.htm',{})
+
+            @@include('html/_principles.htm',{})
+
+            @@include('html/_readmore.htm',{
+            "src_img":"img/readmore/01.jpg"
+            })
+
+            @@include('html/_location.htm',{})
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

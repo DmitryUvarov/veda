@@ -61,7 +61,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сніппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Модуль "До/Після"
@@ -89,7 +89,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль паралаксу мишею

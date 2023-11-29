@@ -1,10 +1,27 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Оставьте свои данные
+				и мы свяжемся с вами
+				в ближайшее время!</div>
+
+			<form action="#" class="popup__form form-popup">
+				<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя*" class="form-popup__input input-line">
+				<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон*" class="form-popup__input input-line">
+				<button type="submit" class="form-popup__button button">Заказать обратный звонок</button>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<div id="thank" aria-hidden="true" class="popup popup_thank">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__title">Спасибо за заявку!
+				Наш администратор свяжется с вами в ближайшее время!</div>
 		</div>
 	</div>
 </div>

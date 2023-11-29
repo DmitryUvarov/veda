@@ -1,0 +1,81 @@
+.hero-service {
+  background-color: #fbf5ed;
+  padding-top: toRem(50);
+  @include adaptiveValue("padding-bottom", 40, 50);
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__title {
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 50, 30);
+    line-height: 128%; /* 64/50 */
+    margin-bottom: toRem(10);
+  }
+
+  &__text {
+    color: #6d6254;
+    font-family: Montserrat;
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 400;
+    line-height: 133.3%; /* 40/30 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 30);
+    }
+  }
+
+  &__button {
+    @media (min-width: $mobile) {
+      min-width: toRem(340);
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
+.button {
+}
+
+//========================================================================================================================================================
+
+.readmore {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 55, 35);
+    max-width: toRem(745);
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue("gap", 30, 15, 0, 1230, 991);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image-ibg {
+    border-radius: toRem(5);
+    overflow: hidden;
+    height: fit-content;
+    padding-bottom: percent(403, 585);
+  }
+
+  &__content {
+  }
+
+  &__showmore {
+  }
+
+  &__button {
+    width: 100%;
+    @include adaptiveValue("margin-top", 30, 20);
+  }
+}
