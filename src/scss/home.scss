@@ -360,7 +360,8 @@
       flex: 0 0 calc(50% - toRem(15));
     }
     @media (max-width: $mobile) {
-      padding-bottom: percent(220, 345);
+      // padding-bottom: percent(220, 345);
+      padding-bottom: 92%;
     }
   }
 
