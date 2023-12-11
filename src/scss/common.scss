@@ -118,8 +118,11 @@
   border-top: toRem(1) solid #6d6254;
   border-bottom: toRem(1) solid #6d6254;
   &__wrapper {
-    -webkit-transition-timing-function: linear !important;
-    transition-timing-function: linear !important;
+    // -webkit-transition-timing-function: linear !important;
+    // transition-timing-function: linear !important;
+
+    white-space: nowrap;
+    gap: toRem(10);
   }
 
   &__slide {

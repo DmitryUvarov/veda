@@ -29,41 +29,41 @@ function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
 
-	if (document.querySelector('.slider-text')) {
-		// Створюємо слайдер
-		new Swiper('.slider-text', {
-			modules: [ Autoplay],
-			observer: true,
-			observeParents: true,
-			speed: 8000,
-			loop: true,
-			allowTouchMove: false,
+	// if (document.querySelector('.slider-text')) {
+	// 	// Створюємо слайдер
+	// 	new Swiper('.slider-text', {
+	// 		modules: [ Autoplay],
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		speed: 8000,
+	// 		loop: true,
+	// 		allowTouchMove: false,
 
-			autoplay: {
-				delay: 0,
-				disableOnInteraction: false,
-			},
+	// 		autoplay: {
+	// 			delay: 0,
+	// 			disableOnInteraction: false,
+	// 		},
 
-			breakpoints: {
-				320: {
-					slidesPerView: "auto",
-					spaceBetween: 20,
-				},
-				768: {
-					slidesPerView: "auto",
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: "auto",
-					spaceBetween: 40,
-				},
-				1230: {
-					slidesPerView: "auto",
-					spaceBetween: 60,
-				},
-			},
-		});
-	}
+	// 		breakpoints: {
+	// 			320: {
+	// 				slidesPerView: "auto",
+	// 				spaceBetween: 20,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: "auto",
+	// 				spaceBetween: 20,
+	// 			},
+	// 			992: {
+	// 				slidesPerView: "auto",
+	// 				spaceBetween: 40,
+	// 			},
+	// 			1230: {
+	// 				slidesPerView: "auto",
+	// 				spaceBetween: 60,
+	// 			},
+	// 		},
+	// 	});
+	// }
 
 	if (document.querySelector('.offers__slider')) {
 		// Створюємо слайдер
