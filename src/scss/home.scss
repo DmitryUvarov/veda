@@ -226,13 +226,13 @@
   &__image-ibg--contain {
     @media (max-width: $tablet) {
       align-self: center;
-      width: toRem(220);
-      flex: 0 0 toRem(200);
+      width: toRem(320);
+      flex: 0 0 toRem(187);
     }
 
     @media (min-width: $mobile) {
       height: 100%;
-      flex: 0 0 toRem(220);
+      flex: 0 0 toRem(320);
       padding-bottom: percent(189, 1200);
     }
     img {
