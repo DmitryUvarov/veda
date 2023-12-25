@@ -533,6 +533,12 @@
     margin-bottom: toRem(10);
     border-radius: toRem(5);
     overflow: hidden;
+
+    .preloader {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
   }
 
   &__content {
@@ -848,6 +854,7 @@
 }
 
 .slide-reviews {
+  position: relative;
   border-radius: toRem(5);
   background: #fbf5ed;
   padding: toRem(11) toRem(16);

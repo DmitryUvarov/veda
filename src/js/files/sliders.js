@@ -75,7 +75,7 @@ function initSliders() {
 			slidesPerView: 1,
 			spaceBetween: 10,
 			loop: true,
-
+			lazyPreloaderClass: 'preloader',
 			navigation: {
 				prevEl: '.offers__slider .button-prev',
 				nextEl: '.offers__slider .button-next',
@@ -104,6 +104,7 @@ function initSliders() {
 						slidesPerView: 1,
 						spaceBetween: 0,
 						speed: 800,
+						lazyPreloaderClass: 'preloader',
 
 						pagination: {
 							el: '.team__pagination',
@@ -151,6 +152,7 @@ function initSliders() {
 			slidesPerView: 3,
 			spaceBetween: 30,
 			loop: true,
+			lazyPreloaderClass: 'preloader',
 
 			navigation: {
 				prevEl: '.reviews__slider .button-prev',
