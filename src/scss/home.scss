@@ -340,7 +340,7 @@
 
     @media (max-width: $mobile) {
       flex-direction: column;
-      gap: toRem(10);
+      gap: toRem(20);
     }
 
     &_reverse {
@@ -353,7 +353,7 @@
   &__image-ibg {
     border-radius: toRem(5);
     overflow: hidden;
-    padding-bottom: percent(460, 1200);
+    padding-bottom: percent(586, 1200);
     height: fit-content;
 
     @media (min-width: $mobile) {
@@ -366,29 +366,37 @@
   }
 
   &__content {
-    border-radius: toRem(5);
-    border: toRem(1) solid #6d6254;
+    // border-radius: toRem(5);
+    // border: toRem(1) solid #6d6254;
 
-    @include adaptiveValue("padding", 40, 15);
+    // @include adaptiveValue("padding", 40, 15);
 
     @media (min-width: $mobile) {
       flex: 0 0 calc(50% - toRem(15));
     }
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
+    color: #000100;
     font-family: "Montserrat";
     @include adaptiveValue("font-size", 30, 20);
     font-weight: 400;
     line-height: 133.3%; /* 40/30 */
 
-    @include adaptiveValue("margin-bottom", 20, 10);
+    @include adaptiveValue("margin-bottom", 30, 10);
   }
 
   &__text {
-    color: #6d6254;
+    color: #000100;
     @include adaptiveValue("font-size", 24, 18);
     line-height: 108.3%; /* 26/24 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 20);
+    }
 
     p {
       &:not(:last-child) {
@@ -416,6 +424,33 @@
     }
   }
 
+  &__price {
+    color: #000100;
+    font-family: Montserrat;
+    font-size: 30px;
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 600;
+    line-height: 135%; /* 135.2% */
+    text-decoration-line: underline;
+
+    margin-top: auto;
+
+    &::after {
+      content: "";
+      @include adaptiveValue("width", 30, 25);
+      @include adaptiveValue("height", 30, 25);
+      flex-shrink: 0;
+      top: -10px;
+      position: relative;
+      display: inline-block;
+
+      background-image: url("@img/service/info.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
   &__link {
     color: #6d6254;
     @include adaptiveValue("font-size", 24, 18);
@@ -424,6 +459,148 @@
     display: block;
     text-decoration: underline;
     margin-top: toRem(10);
+  }
+}
+
+//========================================================================================================================================================
+
+.procedure {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 52, 20, 0, 1230, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    flex: 0 0 percent(586, 1200);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    color: #000100;
+    font-family: "Montserrat";
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 400;
+    line-height: 133.3%; /* 40/30 */
+
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+
+  &__text {
+    line-height: 150%;
+    @include adaptiveValue("font-size", 24, 18);
+    ul {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+    li {
+      display: flex;
+      &::before {
+        content: "·";
+        margin: 0 toRem(13);
+        font-size: toRem(26);
+
+        @media (max-width: $mobile) {
+          margin: 0 toRem(10);
+        }
+      }
+    }
+  }
+}
+.text {
+}
+
+//========================================================================================================================================================
+
+.planning {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 30, 20, 0, 1230, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 25);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    color: #000100;
+    font-family: "Montserrat";
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 400;
+    line-height: 133.3%; /* 40/30 */
+
+    @include adaptiveValue("margin-bottom", 30, 10);
+  }
+
+  &__text {
+    line-height: 130%;
+    @include adaptiveValue("font-size", 24, 18);
+
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+    ul {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+      }
+    }
+    li {
+      display: flex;
+      &::before {
+        content: "·";
+        margin: 0 toRem(13);
+        font-size: toRem(26);
+
+        @media (max-width: $mobile) {
+          margin: 0 toRem(10);
+        }
+      }
+    }
+  }
+
+  &__image-ibg {
+    flex: 0 0 percent(586, 1200);
+    height: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: percent(586, 1200);
+
+    @media (max-width: $mobile) {
+      padding-bottom: 100%;
+    }
+  }
+
+  &__link {
+    width: 100%;
   }
 }
 
