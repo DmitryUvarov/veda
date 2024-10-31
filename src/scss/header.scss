@@ -270,15 +270,15 @@
 
       background-color: #fff;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      padding: toRem(20) toRem(15);
+      padding: toRem(20) toRem(5);
       transition: all 0.3s ease 0s;
       // border-radius: toRem(10);
       max-height: toRem(300);
-      overflow-y: auto;
+      // overflow-y: auto;
       pointer-events: none;
       visibility: hidden;
       opacity: 0;
-      z-index: 2;
+      z-index: 3;
     }
 
     @media (max-width: $mobile) {
@@ -287,20 +287,114 @@
   }
 
   &__subitem {
+    position: relative;
+
     &:not(:last-child) {
       margin-bottom: toRem(5);
+    }
+
+    &:hover {
+      @media (min-width: $mobile) {
+        background-color: rgba(0, 0, 0, 0.05);
+        .menu__sublist-sub {
+          // top: calc(100% + toRem(10));
+          pointer-events: all;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          width: toRem(25);
+          height: 150%;
+          top: -25%;
+          left: 100%;
+          // background-color: red;
+        }
+      }
     }
   }
 
   &__sublink {
     display: block;
-    padding: toRem(3) 0;
+    padding: toRem(3) toRem(10);
     transition: all 0.3s ease 0s;
 
     @media (min-width: $mobile) {
       color: #000;
     }
 
+    @media (any-hover: hover) {
+      &:hover {
+        color: #c5ac8e;
+      }
+    }
+
+    &[data-spoller] {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(5);
+
+      &::after {
+        content: "\e900";
+        @extend %ic;
+        font-size: toRem(8);
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease 0s;
+      }
+
+      &._spoller-active {
+        color: #c5ac8e;
+        @media (max-width: $mobile) {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__sublist-sub {
+    @media (min-width: $mobile) {
+      position: absolute;
+      top: 0;
+      left: calc(100% + toRem(10));
+      // width: 100%;
+      width: max-content;
+      max-width: toRem(250);
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      background-color: #fff;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: toRem(15);
+    }
+    @media (max-width: $mobile) {
+      padding-left: toRem(15);
+      border-left: 3px solid #c5ac8e;
+    }
+  }
+
+  &__subitem-sub {
+    &:not(:last-child) {
+      margin-bottom: toRem(5);
+    }
+  }
+
+  &__sublink-sub {
+    // font-size: toRem(18);
+    line-height: 158%;
+    color: #383838;
+
+    @media (max-width: $mobile) {
+      font-size: toRem(20);
+    }
+
+    transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         color: #c5ac8e;
